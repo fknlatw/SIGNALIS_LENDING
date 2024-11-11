@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
+:root{
+    --orange: #cc3500;
+    --header-height: 50px;
+    --blue: rgb(61, 61, 255);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Geo", sans-serif;
+    line-height: 1;
+    list-style: none;
+    color: inherit;
+}
+html{
+    scroll-behavior: smooth;
+}
+h1 {
+    font-family: "Turret Road", sans-serif;
+    font-style: italic;
+}
+p{
+    font-size: 16px;
+}
+body{
+    background-color: #000;
+}
+i{
+    display: block;
+}
+button{
+    cursor: pointer;
+    color: inherit;
+    border: none;
+    padding: 0;
+    display: block;
+    background: transparent;
+}
+/*header*/
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    backdrop-filter: blur(0px);
+    transition: backdrop-filter 0.3s, background-color 0.3s;
+}
+.header_scroll_top{
+    margin: auto 0;
+    display: none;
+}
+.fa-arrow-up{
+    color: var(--orange);
+}
+.active_header{
+    background-color:#0000009f;
+    backdrop-filter: blur(10px);
+    
+}
+.header_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--header-height);
+    
+}
+.header_list{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.header_list li a{
+    color: var(--orange);
+}
+
+.header_list li a:hover{
+    color: var(--blue);
+}
+.header_scroll_top:hover .fa{
+    color: var(--blue);
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/*banner*/
+.banner{
+    margin-top:-50px;
+    position: relative;
+    
+    
+    min-height: 400px;
+    background: url("./images/wounded_star.png");
+    background-size: cover;
+    background-position: 80% center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    box-shadow:inset 40px 0px 50px #000,inset -40px 0px 50px #000;
+}
+
+.banner_text{
+    margin: 30px 0;
+    max-width: 480px;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    padding: 10px;
+}
+
+.banner_text::before{
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    backdrop-filter: blur(10px);
+    z-index: 0;
+    background-color:rgba(0, 0, 0, 0.603);
+}
+.banner_text>*{
+    position: relative;
+}
+.banner_text span{
+    color: var(--orange);
+}
+.banner_text p{
+    margin-top: 10px;
+    font-weight: 100;
+}
+/*STORY*/
+.story_container{
+    color: #fff;
+    padding-top: 50px;
+}
+.title{
+    border-bottom: 1px solid var(--orange);
+    color: #fff;
+    padding: 10px 20px;
+}
+.part{
+    margin: 0.5rem 0 0 2rem;
+}
+.chapter{
+    margin-bottom: 1.25rem;
+}
+.content{
+    padding: 10px;
+}
+/*small banner*/
+.small_banner{
+    min-height: 200px;
+    background-repeat: no-repeat;
+    border: 2px solid var(--orange);
+    margin: 0 10px;
+}
+.story_small_banner{
+    background: url("./images/mines_hiding.png");
+    background-size: cover;
+    background-position: 50% top;
+    margin-top: 20px;
+}
+/*characters*/
+.characters_section{
+    color: #fff;
+}
+.characters_container{
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-auto-flow: dense;
+    row-gap: 10px;
+    justify-items: center;
+    margin-bottom: 10px;
+}
+.characters_title{
+    grid-column: 1/-1;
+    justify-self: start;
+    width: 100%;
+}
+.character_card{
+    margin: 0 10px;
+    padding: 10px;
+}
+.character_card_img{
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--orange);
+}
+.character_card_text{
+    font-size: 14px;
+    
+}
+.character_card h5{
+    margin-bottom: 10px;
+    color: var(--blue);
+}
+.replika_subtitle{
+    grid-column: 1;
+    grid-row: 2;
+    border-bottom: 1px solid var(--orange);
+    align-self: start;
+}
+.gestalts_subtitle{
+    border-bottom: 1px solid var(--orange);
+    align-self: start;
+}
+.characters_small_banner{
+    background: url("./images/Adler_YouShouldntHaveReturned.png");
+    background-size: cover;
+    background-position: 80% top;
+    margin-top: 20px;
+}
+/*locations*/
+.locations_title{
+   padding-top: 50px;
+}
+.locations_small_banner{
+    background: url("./images/Isa_Performs_Ritual.png");
+    background-size: cover;
+    background-position: 50% top;
+    margin-top: 20px;
+}
+.locations_text{
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.location_figure{
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid var(--orange);
+    border-right: 10px solid var(--orange);
+    padding: 10px
+}
+
+.location_image{
+    width: 100%;
+    margin-bottom: 10px;
+    
+    object-fit: cover;
+}
+/*achievements*/
+.achievements_container{
+    padding: var(--header-height) 0;
+
+}
+.achievements_section{
+    color: #fff;
+    box-shadow:inset 0px -60px 10px -40px red;
+}
+.achievements_content{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+.achievement_image{
+    width: 100%;
+}
+.achievements_subtitle{
+    grid-column: 1/-1;
+}
+/*footer*/
+.footer{
+    padding: 40px 0;
+    color: red;
+    border-top: 1px solid var(--orange);
+}
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.footer_image{
+    max-width: 200px;
+    object-fit: cover;
+    object-position: 50%;
+    height: 40px;
+    
+}
+.author{
+    font-family: "Turret Road", sans-serif;
+}
+.footer_info{
+    display: flex;
+    flex-direction: column;
+    
+}
+.footer_list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about_game{
+    max-width: 500px;
+}
